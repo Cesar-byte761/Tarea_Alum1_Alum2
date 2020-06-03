@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblMensaje" min="-2" pref="132" max="-2" attributes="0"/>
@@ -31,7 +31,6 @@
                       <Component id="cmbMeses" alignment="0" max="32767" attributes="0"/>
                       <Component id="lblRelleno1" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="btnDias" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="256" max="32767" attributes="0"/>
           </Group>
@@ -46,9 +45,7 @@
               <Component id="cmbMeses" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="lblMensaje" min="-2" pref="30" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="btnDias" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="161" max="32767" attributes="0"/>
+              <EmptySpace pref="199" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,11 +69,6 @@
     <Component class="javax.swing.JLabel" name="lblMensaje">
       <Properties>
         <Property name="text" type="java.lang.String" value="numero de dias de ese mes"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnDias">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ver dias"/>
       </Properties>
     </Component>
   </SubComponents>
