@@ -37,20 +37,18 @@ public class Ventana extends javax.swing.JFrame {
         lblRelleno1 = new javax.swing.JLabel();
         cmbMeses = new javax.swing.JComboBox<>();
         lblMensaje = new javax.swing.JLabel();
-        btnDias = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblRelleno1.setText("Selecciona un mes:");
 
-        lblMensaje.setText("numero de dias de ese mes");
-
-        btnDias.setText("Ver dias");
-        btnDias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDiasActionPerformed(evt);
+        cmbMeses.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbMesesItemStateChanged(evt);
             }
         });
+
+        lblMensaje.setText("numero de dias de ese mes");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -62,8 +60,7 @@ public class Ventana extends javax.swing.JFrame {
                     .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(cmbMeses, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblRelleno1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(btnDias))
+                        .addComponent(lblRelleno1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(256, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -75,20 +72,17 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(cmbMeses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnDias)
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnDiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiasActionPerformed
+    private void cmbMesesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbMesesItemStateChanged
         // TODO add your handling code here:
         String mesSeleccionado = (String) cmbMeses.getSelectedItem();
         lblMensaje.setText(mesSeleccionado + " tiene " + Year.getDiasMes(mesSeleccionado) + " días");
-
-    }//GEN-LAST:event_btnDiasActionPerformed
+    }//GEN-LAST:event_cmbMesesItemStateChanged
 
 /**
  * @param args the command line arguments
@@ -138,7 +132,6 @@ public static void main(String args[]) {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnDias;
     private javax.swing.JComboBox<String> cmbMeses;
     private javax.swing.JLabel lblMensaje;
     private javax.swing.JLabel lblRelleno1;
